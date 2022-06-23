@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 // class Card extends Component{
 // 	render(){
@@ -10,13 +10,13 @@ import React, { Component } from 'react';
 // 	}
 // }
 
-const Card = () => {
+const Card = ({id, name, email}) => {
 	return (
-		<div className="bg-light-green dib br3 pa3 ma2 grow">
-			<img alt="photo" src="https://robohash.org/torrex"/>
+		<div className="tc bg-light-green dib br3 pa3 ma2 grow">
+			<img alt="robots" src={`https://robohash.org/${id}`}/>
 			<div>
-				<h2>Hello Name</h2>
-				<p>someEmail@mailEmail.com</p>
+				<h2>{name}</h2>
+				<p>{email}</p>
 			</div>
 		</div>
 	);
